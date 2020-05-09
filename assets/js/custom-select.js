@@ -83,12 +83,113 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 
 
-// Flash Deals
-$('#Flash_Deals').owlCarousel({
+// Sản phẩm bán chạy
+$('#carouselrightsell').owlCarousel({
 	loop:true,
 	margin:0,
 	autoplay:true,
-	autoplayTimeout:10000,
+	autoplayTimeout:222222000,
+	autoplayHoverPause:false,
+	dots: true,
+	responsiveClass:true,
+	responsive:{
+		0:{
+			items:1,
+			nav:false
+		},
+		600:{
+			items:2,
+			nav:false
+		},
+		1000:{
+			items:3,
+			nav:false,
+		},
+	}
+});
+
+
+// Flash Deals
+$('#flash_deals').owlCarousel({
+	loop:true,
+	margin:0,
+	autoplay:true,
+	autoplayTimeout:5000,
+	autoplayHoverPause:false,
+	dots: false,
+	responsiveClass:true,
+	responsive:{
+		0:{
+			items:1,
+			nav:true
+		},
+		600:{
+			items:3,
+			nav:true
+		},
+		1000:{
+			items:4,
+			nav:true,
+		},
+	}
+});
+
+// Ngành Hàng Quan Tâm
+$('#carouselmall').owlCarousel({
+	loop:true,
+	margin:0,
+	autoplay:true,
+	autoplayTimeout:2000,
+	autoplayHoverPause:false,
+	dots: false,
+	responsiveClass:true,
+	responsive:{
+		0:{
+			items:1,
+			nav:true
+		},
+		600:{
+			items:3,
+			nav:true
+		},
+		1000:{
+			items:4,
+			nav:true,
+		},
+	}
+});
+
+// Nhà Thầu Thi Công 
+$('#carouselproperty').owlCarousel({
+	loop:true,
+	margin:0,
+	autoplay:true,
+	autoplayTimeout:2000,
+	autoplayHoverPause:false,
+	dots: false,
+	responsiveClass:true,
+	responsive:{
+		0:{
+			items:2,
+			nav:true
+		},
+		600:{
+			items:4,
+			nav:true
+		},
+		1000:{
+			items:6,
+			nav:true,
+		},
+	}
+});
+
+// Tư vấn thiết kế
+$('#carouseluser').owlCarousel({
+	loop:true,
+	margin:0,
+	autoplay:true,
+	autoplayTimeout:2000,
 	autoplayHoverPause:false,
 	dots: false,
 	responsiveClass:true,
@@ -99,10 +200,10 @@ $('#Flash_Deals').owlCarousel({
 		},
 		600:{
 			items:2,
-			nav:false
+			nav:true
 		},
 		1000:{
-			items:4,
+			items:3,
 			nav:true,
 		},
 	}

@@ -81,3 +81,29 @@ function closeAllSelect(elmnt) {
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
+
+
+// Flash Deals
+$('#Flash_Deals').owlCarousel({
+	loop:true,
+	margin:0,
+	autoplay:true,
+	autoplayTimeout:10000,
+	autoplayHoverPause:false,
+	dots: false,
+	responsiveClass:true,
+	responsive:{
+		0:{
+			items:1,
+			nav:true
+		},
+		600:{
+			items:2,
+			nav:false
+		},
+		1000:{
+			items:4,
+			nav:true,
+		},
+	}
+});

@@ -407,6 +407,9 @@ img
     margin: auto;
     display: block;
 }
+.owl-carousel .owl-item img{
+	width: auto;
+}
 .product-testimonials .img-testimonials
 {
     width: 90px;

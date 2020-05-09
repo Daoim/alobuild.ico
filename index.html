@@ -1,12 +1,1458 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Page Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AloBuild</title>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/responsive.css">
+<link rel="stylesheet" href="assets/fontawesome/css/all.css">
+
+
 </head>
 <body>
+	<header>
+		<!------------------------------ Top header ------------------------>
+		<div class="d-none d-lg-block header-top">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-2 col-lg-3 col-xl-4">
+						<a href="#" class="alo-map" title="Khu Vực Của Bạn"><i class="fas fa-map-marker-alt mr-1"></i> Khu vực của bạn</a>
+					</div>
+					<div class="col-12 col-md-4 col-lg-4 d-xl-none mobile-acount alo-account">
+						<ul class="row align-items-center">
+							<li class="col-10 col-lg-9"><a class="alo-register" href="#" title="Đăng Ký"><i class="far fa-user-circle mr-1"></i> Đăng ký/ Đăng nhập</a></li>
+							<li class="col-2 col-lg-3 text-right">
+								<a class="alo-cart" href="#" title="Giỏ Hàng">
+									<span class="text">Giỏ Hàng</span>
+									<span class="counter-number">99+</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-6 col-lg-5 col-xl-8">
+						<ul class="header-links d-flex flex-wrap justify-content-end">
+						   <li  class="ban-hang pr-3"><a href="#" title="Bán hàng cùng AloBuild">Bán hàng cùng AloBuild</a></li>
+						   <li>
+								<div class="dropdown dropdown-language">
+									<a class="dropdown-toggle pl-0 pr-0" href="#" role="button" id="dropdownlanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngôn ngữ</a>
+									<div class="dropdown-menu dropdown-top dropdown-menu-right" aria-labelledby="dropdownlanguage">
+										<a class="dropdown-item" href="#">English</a>
+										<a class="dropdown-item" href="#">German</a>
+										<a class="dropdown-item" href="#">SLebanon</a>
+										<a class="dropdown-item" href="#">Thailand</a>
+										<a class="dropdown-item" href="#">Guatemala</a>
+										<a class="dropdown-item" href="#">Tiếng Việt</a>
+										<a class="dropdown-item" href="#">Dominica</a>
+									</div>
+								</div>
+						   </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+		<!------------------------------ Middle header ------------------------>
 
+		<div class="d-none d-lg-block header-middle">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md-3 col-lg-2 col-xl-2 logo"><a href="/" title="Alo Build"><img src="images/logo.png" alt="Alo Build"></a></div>
+					<div class="col-md-9 col-lg-10 col-xl-7 form-search">
+						<div class="row align-items-center">
+							<button class="d-none d-md-block col-md-2 col-lg-1 menu-desktop" data-toggle="collapse" data-target="#menu-desktop"><i class="fa fa-bars"></i></button>
+							<div class="col-md-10 col-lg-11 inner-form">
+								<div class="row">
+								   <div class="text-center pt-2 pb-2 col-lg-2 col-md-3 input-field first-wrap">
+										
+										<!-- <div class="dropdown show"> -->
+											<!-- <a class="dropdown-toggle" href="#" role="button" id="dropdowncategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tất cả</a> -->
+
+										  <!-- <div class="dropdown-menu" aria-labelledby="dropdowncategory"> -->
+										    <!-- <a class="dropdown-item" href="#">Vật liệu xây dựng</a> -->
+										    <!-- <a class="dropdown-item" href="#">Trang trí nội Thất</a> -->
+										    <!-- <a class="dropdown-item" href="#">Thiết kế</a> -->
+										    <!-- <a class="dropdown-item" href="#">Thi công</a> -->
+										    <!-- <a class="dropdown-item" href="#">Thiết bị xây Dựng</a> -->
+										    <!-- <a class="dropdown-item" href="#">Thiết bị MEP</a> -->
+										  <!-- </div> -->
+								   		<!-- </div> -->
+										
+										<div class="input-group-btn search-panel">
+											<button type="button" class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown">
+												<span id="search_concept">Tất cả</span> <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" role="menu">
+											  <li><a class="dropdown-item"   href="#contains">Tất cả</a></li>
+											  <li><a class="dropdown-item"   href="#contains">Vật liệu xây dựng</a></li>
+											  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
+											  <li><a class="dropdown-item"  href="#greather_than">Thiết kế</a></li>
+											  <li><a class="dropdown-item"  href="#less_than">Thi công</a></li>
+											  <li><a class="dropdown-item"  href="#all">Thiết bị xây Dựng</a></li>
+											  <li><a class="dropdown-item"  href="#all">Thiết bị MEP</a></li>
+											</ul>
+										</div>
+										
+										
+								   	</div>
+								    <input class="pt-2 pb-2 col-6 col-lg-8 input-field second-wrap" id="search" type="text" name="search" placeholder="Nhập tên hoặc mã sản phẩm bạn quan tâm">
+								    <button type="submit" class="pt-2 pb-2 col-3 p-0 col-lg-2 input-field third-wrap btn-search"><i class="fa fa-search" aria-hidden="true"></i> Tìm</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-none d-xl-block col-xl-3 alo-account">
+						<ul class="row align-items-center">
+							<li class="col-md-9 text-center"><a class="alo-register" href="#" title="Đăng Ký"><i class="far fa-user-circle mr-1"></i> Đăng ký / Đăng nhập</a></li>
+							<li class="col-md-3 text-center">
+								<a class="alo-cart" href="#" title="Giỏ hàng">
+									<span class="text">Giỏ hàng</span>
+									<span class="counter-number">99+</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!------------------------------ Bottom header ------------------------>
+
+		<div id="menu-desktop" class="d-none d-lg-block collapse show header-bottom">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg p-0">
+						<ul class="navbar-nav menu-header">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown-thiet-ke" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Thiết Kế - Thi Công
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-thiet-ke">
+									<li>
+										<a class="dropdown-item" href="#" title="Thiết Kế Biệt Thự">Thiết Kế Biệt Thự</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Thiết Kế Khách Sạn">Thiết Kế Khách Sạn</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Thiết Kế Biệt Thự Vườn">Thiết Kế Biệt Thự Vườn</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Thiết Kế Phòng Khách">Thiết Kế Phòng Khách</a>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown-trang-tri" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Trang Trí Nội Thất
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-trang-tri">
+									<li>
+										<a class="dropdown-item" href="#" title="Sofa Đẹp">Sofa Đẹp</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Giấy Gián">Giấy Gián Tường</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Tay Nắm Tủ">Tay Nắm Tủ</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Đá Nhân Tạo">Đá Nhân Tạo</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Sàn Nhựa">Sàn Nhựa</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Khóa Cửa">Khóa Cửa</a>
+									</li>
+									
+								</ul>
+							</li>
+
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown-vat-lieu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Vật Liệu Xây Dựng
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-vat-lieu">
+									<li>
+										<a class="dropdown-item" href="#" title="Cát Vàng">Cát Vàng</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Đá">Đá</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Xi Măng">Xi Măng</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Thép">Thép</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Ống Thoát Nước">Ống Thoát Nước</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Sơn Nước">Sơn Nước</a>
+									</li>
+									
+								</ul>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown-xay-dung" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Thiết Bị Xây Dựng
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-xay-dung">
+									<li>
+										<a class="dropdown-item" href="#" title="Máy Hàn">Máy Hàn</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Máy Cắt">Máy Cắt</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Đồng Hồ Đo Điện Vạn Năng">Đồng Hồ Đo Điện Vạn Năng</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Tủ Điện">Tủ Điện</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Ổ Cắm Điện">Ổ Cắm Điện</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Dây An Toàn">Dây An Toàn</a>
+									</li>
+									
+								</ul>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="dropdown-mep" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Thiết Bị MEP
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown-mep">
+									<li>
+										<a class="dropdown-item" href="#" title="Máy Phát Động Lực">Máy Phát Động Lực</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Máp Biến Áp">Máp Biến Áp</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="#" title="Máy kéo">Máy kéo</a>
+									</li>
+								</ul>
+							</li>
+							
+							<li class="nav-item">
+								<a class="nav-link dropdown-toggle menu-no-caret" style="border:0" href="#" id="dropdown-vat-lieu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Dự án
+								</a>
+							</li>
+
+						</ul>
+
+				
+				</nav>
+			</div>
+		</div>
+
+
+		<!--------------------------------------- Menu --------------------------->
+		<div class="d-lg-none menu-mobile">
+			<div class="top-menu">
+				<div class="container">
+					<ul class="row">
+						<li class="col-6 col-sm-6 col-md-3 icon-mobile"><a class="location" href="#" title="Khu vực"><i class="fas mr-1 fa-map-marker-alt"></i> Khu vực của bạn</a></li>
+						<li class="col-6 col-sm-6 col-md-3 icon-mobile"><a href="#" title="Đăng ký"><i class="far fa-user-circle mr-1"></i> Đăng ký/ Đăng nhập</a></li>
+						<li class="col-6 col-sm-6 col-md-3 pr-0 icon-mobile"><a href="#" title="Bán hàng"><i class="fas mr-1 fa-hand-holding-usd"></i> Bán hàng cùng AloBuild</a></li>
+						<li class="col-6 col-sm-6 col-md-3 icon-mobile">
+							<div class="dropdown dropdown-language">
+								<a class="dropdown-toggle pl-0 pr-0" href="#" role="button" id="mobilelanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngôn Ngữ</a>
+								<div class="dropdown-menu dropdown-top dropdown-menu-right" aria-labelledby="mobilelanguage">
+									<a class="dropdown-item" href="#">English</a>
+									<a class="dropdown-item" href="#">German</a>
+									<a class="dropdown-item" href="#">SLebanon</a>
+									<a class="dropdown-item" href="#">Thailand</a>
+									<a class="dropdown-item" href="#">Guatemala</a>
+									<a class="dropdown-item" href="#">Tiếng Việt</a>
+									<a class="dropdown-item" href="#">Dominica</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<ul class="row sticky-bar align-items-center">
+					<li class="col-2">
+						<span class="btn-open">&#9776;</span>
+						<div class="sidenav">
+							<span class="btn-close">&times;</span>
+							<div class="sidenav-item">
+								<ul class="navbar-nav menu-header">
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="dropdown-thiet-ke" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+											Thiết Kế - Thi Công
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="dropdown-thiet-ke">
+											<li>
+												<a class="dropdown-item" href="#" title="Thiết Kế Biệt Thự">Thiết Kế Biệt Thự</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Thiết Kế Khách Sạn">Thiết Kế Khách Sạn</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Thiết Kế Biệt Thự Vườn">Thiết Kế Biệt Thự Vườn</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Thiết Kế Phòng Khách">Thiết Kế Phòng Khách</a>
+											</li>
+										</ul>
+									</li>
+									
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="dropdown-trang-tri" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Trang Trí Nội Thất
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="dropdown-trang-tri">
+											<li>
+												<a class="dropdown-item" href="#" title="Sofa Đẹp">Sofa đẹp</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Giấy Gián">Giấy Gián Tường</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Tay Nắm Tủ">Tay Nắm Tủ</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Đá Nhân Tạo">Đá Nhân Tạo</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Sàn Nhựa">Sàn Nhựa</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Khóa Cửa">Khóa Cửa</a>
+											</li>
+											
+										</ul>
+									</li>
+
+
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="dropdown-vat-lieu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Vật Liệu Xây Dựng
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="dropdown-vat-lieu">
+											<li>
+												<a class="dropdown-item" href="#" title="Cát Vàng">Cát Vàng</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Đá">Đá</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Xi Măng">Xi Măng</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Thép">Thép</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Ống Thoát Nước">Ống Thoát Nước</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Sơn Nước">Sơn Nước</a>
+											</li>
+											
+										</ul>
+									</li>
+
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="dropdown-xay-dung" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Thiết Bị Xây Dựng
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="dropdown-xay-dung">
+											<li>
+												<a class="dropdown-item" href="#" title="Máy Hàn">Máy Hàn</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Máy Cắt">Máy Cắt</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Đồng Hồ Đo Điện Vạn Năng">Đồng Hồ Đo Điện Vạn Năng</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Tủ Điện">Tủ Điện</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Ổ Cắm Điện">Ổ Cắm Điện</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Dây An Toàn">Dây An Toàn</a>
+											</li>
+											
+										</ul>
+									</li>
+
+									<li class="nav-item dropdown">
+										<a class="nav-link dropdown-toggle" href="#" id="dropdown-mep" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Thiết Bị MEP
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="dropdown-mep">
+											<li>
+												<a class="dropdown-item" href="#" title="Máy Phát Động Lực">Máy Phát Động Lực</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Máp Biến Áp">Máp Biến Áp</a>
+											</li>
+											<li>
+												<a class="dropdown-item" href="#" title="Máy kéo">Máy kéo</a>
+											</li>
+										</ul>
+									</li>
+									
+									<li class="nav-item">
+										<a class="nav-link dropdown-toggle menu-no-caret" style="border:0" href="#" id="dropdown-vat-lieu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Dự án
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="col-6"><a href="#" title="Đăng ký"><img src="images/logo.png" alt="AloBuild"></a></li>
+					<li class="col-2 mobile-search">
+						<a data-toggle="collapse" href="#formsearch-mobile" role="button" aria-expanded="false" aria-controls="formsearch-mobile"><i class="fas fa-search"></i></a>
+					</li>
+					<li class="col-2">
+						<a class="alo-cart" href="#" title="Giỏ hàng">
+							<span class="text">Giỏ hàng</span>
+							<span class="counter-number">99+</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</header>
+	<div id="formsearch-mobile" class="collapse form-seach-mobile">
+			<div class="inner-form row">
+			   	<div class="text-center d-none d-md-block col-md-2 pt-2 pb-2 col-lg-2 col-md-2 input-field first-wrap">
+					<!-- <div class="dropdown show"> -->
+					  <!-- <a class="dropdown-toggle" href="#" role="button" id="mobilecategory" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tất Cả</a> -->
+
+					  <!-- <div class="dropdown-menu" aria-labelledby="mobilecategory"> -->
+					    <!-- <a class="dropdown-item" href="#">Vật liệu xây dựng</a> -->
+					    <!-- <a class="dropdown-item" href="#">Trang trí nội Thất</a> -->
+					    <!-- <a class="dropdown-item" href="#">Thiết kế</a> -->
+					    <!-- <a class="dropdown-item" href="#">Thi công</a> -->
+					    <!-- <a class="dropdown-item" href="#">Thiết bị xây Dựng</a> -->
+					    <!-- <a class="dropdown-item" href="#">Thiết bị MEP</a> -->
+					  <!-- </div> -->
+			   		<!-- </div> -->
+					
+					<div class="input-group-btn search-panel">
+						<button type="button" class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown">
+							<span id="search_concept">Tất cả</span> <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+						  <li><a class="dropdown-item"   href="#contains">Tất cả</a></li>
+						  <li><a class="dropdown-item"   href="#contains">Vật liệu xây dựng</a></li>
+						  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
+						  <li><a class="dropdown-item"  href="#greather_than">Thiết kế</a></li>
+						  <li><a class="dropdown-item"  href="#less_than">Thi công</a></li>
+						  <li><a class="dropdown-item"  href="#all">Thiết bị xây Dựng</a></li>
+						  <li><a class="dropdown-item"  href="#all">Thiết bị MEP</a></li>
+						</ul>
+					</div>
+			   	</div>
+			    <input class="pt-2 pb-2 col-9 col-md-8 col-lg-8 input-field second-wrap" id="search-mobile" type="text" name="search" placeholder="Nhập tên hay mã sản phẩm bạn quan tâm">
+			    <button type="submit" class="pt-2 pb-2 col-3 col-md-2 p-0 col-lg-2 input-field third-wrap btn-search"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+			</div>
+		</div>
+
+
+	<div class="top-home mt-4">
+		<div class="container main-home">
+			<div class="row">
+				<div class="col-12 col-md-12 col-lg-9">
+					<div class="alo-slider">
+						<div id="carouselslider" class="carousel slide" data-interval="3000"data-ride="carousel">
+								<ol class="carousel-indicators">
+								    <li data-target="#carouselslider" data-slide-to="0" class="active"></li>
+								    <li data-target="#carouselslider" data-slide-to="1"></li>
+								    <li data-target="#carouselslider" data-slide-to="2"></li>
+								    <li data-target="#carouselslider" data-slide-to="3"></li>
+								 </ol>
+							  	<div class="carousel-inner">
+							        <a class="carousel-item active" href="#" title="Siêu Sale"><img src="images/mask-group-1.jpg" alt="Siêu Sale"></a>
+							        <a class="carousel-item" href="#" title="Siêu Sale"><img src="images/mask-group-2.jpg" alt="Siêu Sale"></a>
+							        <a class="carousel-item" href="#" title="Siêu Sale"><img src="images/mask-group-3.jpg" alt="Siêu Sale"></a>
+							        <a class="carousel-item" href="#" title="Siêu Sale"><img src="images/mask-group-4.jpg" alt="Siêu Sale"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-3">
+						<div class="quick-fiiter">
+							<ul class="nav nav-tabs">
+							  <li class="nav-item">
+							    <a class="nav-link active" data-toggle="tab" href="#search-du-an">Tìm dự án</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" data-toggle="tab" href="#dang-du-an">Đăng dự án</a>
+							  </li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content p-2">
+								<div class="tab-pane active" id="search-du-an">
+								 	<input class="name-product" type="text" name="name-product" placeholder="Tên dự án">
+								 	<div class="dropdown dropdown-search">
+								        <button class="btn dropdown-toggle" type="button" id="tp" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">Tỉnh / Thành phố</button>
+								        <div class="dropdown-menu" aria-labelledby="tp">
+								          <a class="dropdown-item" href="#">TPHCM</a>
+								          <a class="dropdown-item" href="#">Hà Nội</a>
+								          <a class="dropdown-item" href="#">Đà Nẵng</a>
+								          <a class="dropdown-item" href="#">Cần Thơ</a>
+								          <a class="dropdown-item" href="#">Bình Dương</a>
+								          <a class="dropdown-item" href="#">An Giang</a>
+								          <a class="dropdown-item" href="#">Bà Rịa - Vũng Tàu</a>
+								          <a class="dropdown-item" href="#">Bắc Kạn</a>
+								          <a class="dropdown-item" href="#">Bến Tre</a>
+								          <a class="dropdown-item" href="#">Bình Phước</a>
+								        </div>
+								    </div>
+
+								    <div class="dropdown dropdown-search">
+								        <button class="btn dropdown-toggle" type="button" id="qh" data-toggle="dropdown" data-flip="false" aria-haspopup="true"  aria-expanded="false">Quận / Huyện</button>
+								        <div class="dropdown-menu" aria-labelledby="qh">
+								          <a class="dropdown-item" href="#">Quận 1</a>
+								          <a class="dropdown-item" href="#">Quận 2</a>
+								          <a class="dropdown-item" href="#">Quận 3</a>
+								          <a class="dropdown-item" href="#">Quận 4</a>
+								          <a class="dropdown-item" href="#">Quận 5</a>
+								          <a class="dropdown-item" href="#">Quận 6</a>
+								          <a class="dropdown-item" href="#">Quận 6</a>
+								          <a class="dropdown-item" href="#">Quận 7</a>
+								          <a class="dropdown-item" href="#">Quận 8</a>
+								          <a class="dropdown-item" href="#">Quận 9</a>
+								        </div>
+								    </div>
+
+								    <div class="dropdown dropdown-search">
+								        <button class="btn dropdown-toggle" type="button" id="phuong-xa" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">Phường / Xã</button>
+								        <div class="dropdown-menu" aria-labelledby="phuong-xa">
+								          <a class="dropdown-item" href="#">Phường 1</a>
+								          <a class="dropdown-item" href="#">Phường 2</a>
+								          <a class="dropdown-item" href="#">Phường 3</a>
+								          <a class="dropdown-item" href="#">Phường 4</a>
+								          <a class="dropdown-item" href="#">Phường 5</a>
+								          <a class="dropdown-item" href="#">Phường 6</a>
+								          <a class="dropdown-item" href="#">Phường 7</a>
+								          <a class="dropdown-item" href="#">Phường 8</a>
+								          <a class="dropdown-item" href="#">Phường 9</a>
+								          <a class="dropdown-item" href="#">Phường 10</a>
+								        </div>
+								    </div>
+
+								    <div class="dropdown dropdown-search">
+								        <button class="btn dropdown-toggle" type="button" id="region" data-toggle="dropdown" data-flip="false"  aria-haspopup="true" aria-expanded="false">Diện tích</button>
+								        <div class="dropdown-menu" aria-labelledby="region">
+								          <a class="dropdown-item" href="#">Diện tích 1</a>
+								          <a class="dropdown-item" href="#">Diện tích 2</a>
+								          <a class="dropdown-item" href="#">Diện tích 3</a>
+								        </div>
+								    </div>
+
+								    <div class="dropdown dropdown-search">
+								        <button class="btn dropdown-toggle" type="button" id="xep-hang" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">Xếp hạng</button>
+								        <div class="dropdown-menu" aria-labelledby="xep-hang">
+								          <a class="dropdown-item" href="#">Hạng 1</a>
+								          <a class="dropdown-item" href="#">Hạng 2</a>
+								          <a class="dropdown-item" href="#">Hạng 3</a>
+								        </div>
+								    </div>
+									<button class="submit-product" type="submit" value="tim kiem">Tìm kiếm</button>
+								</div>
+							  <div class="tab-pane" id="dang-du-an">
+							  	<p>Thông tin đăng dự án</p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="box-cate mt-4 mb-4">
+						<ul class="row">
+							<li class="col-6 col-md-4 col-lg-2"><a href="#" title="Flash deals">
+								<img alt="Flash deals" src="images/group-545.png"><h4>Flash deals</h4></a></li>
+							<li class="col-6 col-md-4 col-lg-2"><a href="#" title="Khuyến mãi"><img alt="Khuyến mãi" src="images/group-544.png"><h4>Khuyến mãi</h4></a></li>
+							<li class="col-6 col-md-4 col-lg-2"><a href="#" title="Tìm nhà thiết kế"><img alt="Tìm nhà thiết kế" src="images/group-543.png"><h4>Tìm nhà thiết kế</h4></a></li>
+							<li class="col-6 col-md-4 col-lg-2"><a href="#" title="Tìm nhà thi công"><img alt="Tìm Nnà thi công" src="images/group-542.png"><h4>Tìm nhà thi công</h4></a></li>
+							<li class="col-6 col-md-4 col-lg-2"><a href="#" title="Đăng tin dự án"><img alt="Đăng tin dự án" src="images/group-541.png"><h4>Đăng tin dự án</h4></a></li>
+							<li class="col-6 col-md-4 col-lg-2 pl-0"><a href="#" title="Thương hiệu hàng đầu"><img alt="Thương hiệu hàng đầu" src="images/group-540.png"><h4>Thương hiệu hàng đầu</h4></a></li>
+						</ul>
+					</div>
+
+					<div class="top-sell mt-4 mb-4">
+						<div class="row title">
+							<h2 class="pl-3 pr-3">Sản phẩm bán chạy</h2>
+							<a href="#" class="pl-3 pr-3 all-product" title="Xem tất cả">Xem tất cả</a>
+							<ul class="pl-3 pr-3 breadcrumbs-product">
+								<li><a href="#" title="Vật liệu xây dựng">Vật liệu xây dựng</a></li>
+								<li><a href="#" title="Trang trí nội thất">Trang trí nội thất</a></li>
+								<li><a href="#" title="Thiết bị xây dựng">Thiết bị xây dựng</a></li>
+								<li><a href="#" title="Thiết bị MEP">Thiết bị MEP</a></li>
+							</ul>
+						</div>
+						<div class="d-flex flex-wrap">
+							<a href="#" title="Giường ngủ cực chất" class="col-12 col-md-5 col-lg-3 item-featured">
+								<strong class="d-block">Giường ngủ cực chất</strong>
+								<span class="d-block mt-1">Giá cực bất ngờ</span>
+								<img width="100px" src="images/40.png" alt="Giường ngủ cực chất">
+								<img width="100px" src="images/group-527.png" alt="Giường ngủ cực chất">
+							</a>
+							<div class="col-12 col-md-7 col-lg-9 box-items">
+								<div id="carouselrightsell" class="carousel slide" data-ride="carousel">
+									<ol class="carousel-indicators">
+									    <li data-target="#carouselrightsell" data-slide-to="0" class="active"></li>
+									    <li data-target="#carouselrightsell" data-slide-to="1"></li>
+									    <li data-target="#carouselrightsell" data-slide-to="2"></li>
+									 </ol>
+									<div class="carousel-inner">
+										<div class="row carousel-item active">
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-40.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">1.600.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">2.400.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-51.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">890.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-40.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">1.600.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">2.400.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+										</div>
+
+										<div class="row carousel-item">
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-40.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">1.600.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">2.400.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-51.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">890.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-51.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">890.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+										</div>
+
+										<div class="row carousel-item">
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-40.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">1.600.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">2.400.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-51.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">890.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+											<a href="#" class="col-12 col-md-4 col-lg-4 product-panel product" title="Ghế thư giản herry">
+												<img src="images/image-51.png" alt="Ghế thư giản herry">
+												<h3 class="title-product">Ghế thư giản herry</h3>
+												<strong class="d-block">890.000₫</strong>
+												<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+												<label class="alo-discount">-30%</label>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
+					</div>
+
+					<!-------------------- Flash Deals ---------------------------->
+
+					<div class="alo-channels mt-4 mb-4">
+						<div class="title">
+							<h2>Flash Deals</h2>
+							<div id="countdown"></div>
+							<a href="#" class="all-product" title="Xem tất cả">Xem tất cả</a>
+						</div>
+						<div class="d-flex wrapper-channels flex-wrap">
+							<a href="#" class="col-12 col-md-6 col-lg-3 col-xl-3 product-channel product" title="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<img src="images/group-536.png" alt="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<h3 class="title-product">Ghế an nhung Giselle, Bộ 2, Xanh, Vàng</h3>
+								<strong class="d-block">1.600.000₫</strong>
+								<span class="d-block mt-1 mb-1 price-sale">2.400.000₫</span>
+								<label class="alo-discount">-30%</label>
+							</a>
+							<a href="#" class="col-12 col-md-6 col-lg-3 col-xl-3 product-channel product" title="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<img src="images/group-2.png" alt="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<h3 class="title-product">Ghế an nhung Giselle, Bộ 2, Xanh, Vàng</h3>
+								<strong class="d-block">890.000₫</strong>
+								<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+								<label class="alo-discount">-30%</label>
+							</a>
+							<a href="#" class="col-12 col-md-6 col-lg-3 col-xl-3 product-channel product" title="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<img src="images/group-3.png" alt="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<h3 class="title-product">Ghế an nhung Giselle, Bộ 2, Xanh, Vàng</h3>
+								<strong class="d-block">1.600.000₫</strong>
+								<span class="d-block mt-1 mb-1 price-sale">2.400.000₫</span>
+								<label class="alo-discount">-30%</label>
+							</a>
+							<a href="#" class="col-12 col-md-6 col-lg-3 col-xl-3 product-channel product" title="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<img src="images/group-4.png" alt="Ghế an nhung Giselle, Bộ 2, Xanh, Vàng">
+								<h3 class="title-product">Ghế an nhung Giselle, Bộ 2, Xanh, Vàng</h3>
+								<strong class="d-block">890.000₫</strong>
+								<span class="d-block mt-1 mb-1 price-sale">1.60.000₫</span>
+								<label class="alo-discount">-30%</label>
+							</a>
+						</div>
+					</div>
+
+
+					<!----------------------------- Nội Thất -------------------------->
+					<div class="alo-prom mt-4 mb-4">
+						<div class="row title">
+							<h2 class="pl-3 pr-3">Nội thất</h2>
+							<a href="#" class="pl-3 pr-3 all-product" title="Xem tất cả">Xem tất cả</a>
+							<ul class="pl-3 pr-3 breadcrumbs-product">
+								<li><a href="#" title="Phòng khách">Phòng khách</a></li>
+								<li><a href="#" title="Phòng ngủ">Phòng ngủ</a></li>
+								<li><a href="#" title="Bếp & phòng ăn">Bếp & phòng ăn</a></li>
+								<li><a href="#" title="Phòng tắm">Phòng tắm</a></li>
+								<li><a href="#" title="Ngoại cảnh">Ngoại cảnh</a></li>
+								<li><a href="#" title="Khác">Khác</a></li>
+							</ul>
+						</div>
+
+						<div class="d-flex flex-wrap wrapper-prom">
+							<a href="#" title="Giường ngủ cực chất" class="col-12 col-md-12 col-lg-3 prom-featured item-featured">
+								<strong class="d-block">Giường ngủ cực chất</strong>
+								<span class="d-block mt-1">Giá cực bất ngờ</span>
+								<img width="100px" src="images/30.png" alt="Giường ngủ cực chất">
+								<img width="100px" src="images/group-527.png" alt="Giường ngủ cực chất">
+							</a>
+							<div class="col-12 col-md-12 col-lg-9 box-items">
+								<div class="row">
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Ghế thư giản herry">
+										<img src="images/mask-group-6.png" alt="Ghế thư giản herry">
+										<h3 class="title-product">Ghế thư giản herry</h3>
+										<strong class="mt-1 mb-1 price d-block">3.600.000 - 3.700.000đ</strong>
+										<label class="alo-discount">-30%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Ghế thư giản herry">
+										<img src="images/image-5.png" alt="Ghế thư giản herry">
+										<h3 class="title-product">Ghế thư giản herry</h3>
+										<strong class="mt-1 mb-1 price d-block">3.600.000 - 3.700.000đ</strong>
+										<label class="alo-discount">-30%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Ghế thư giản herry">
+										<img src="images/mask-group-6.png" alt="Ghế thư giản herry">
+										<h3 class="title-product">Ghế thư giản herry</h3>
+										<strong class="mt-1 mb-1 price d-block">3.600.000 - 3.700.000đ</strong>
+										<label class="alo-discount">-30%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+					<!----------------------------- Thiết Bị Vệ Sinh -------------------------->
+					<div class="alo-bathroom mt-4 mb-4">
+						<div class="row title">
+							<h2 class="pl-3 pr-3">Thiết bị vệ sinh</h2>
+							<a href="#" class="pl-3 pr-3 all-product" title="Xem tất cả">Xem tất cả</a>
+							<ul class="pl-3 pr-3 breadcrumbs-product">
+								<li><a href="#" title="Vật liệu xây dựng"> Bộ sưu tầm sen vòi</a></li>
+								<li><a href="#" title="Trang trí nội thất">Bàn cầu</a></li>
+								<li><a href="#" title="Thiết bị xây dựng">Chậu rửa</a></li>
+								<li><a href="#" title="Thiết bị MEP">Bồn tắm</a></li>
+								<li><a href="#" title="Thiết bị MEP">Khu công cộng</a></li>
+								<li><a href="#" title="Thiết bị MEP">Khác</a></li>
+							</ul>
+						</div>
+
+						<div class="d-flex flex-wrap wrapper-bathroom">
+							<a href="#" title="Giường ngủ cực chất" class="col-12 col-md-12 col-lg-3 bathroom-featured item-featured">
+								<strong class="d-block">Giường ngủ cực chất</strong>
+								<span class="d-block mt-1">Giá cực bất ngờ</span>
+								<img width="100px" src="images/30.png" alt="Giường ngủ cực chất">
+								<img width="100px" src="images/group-527.png" alt="Giường ngủ cực chất">
+							</a>
+							<div class="col-12 col-md-12 col-lg-9 box-items">
+								<div class="row">
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Chậu rửa TOTO">
+										<img src="images/image-34.png" alt="Chậu rửa TOTO">
+										<h3 class="title-product">Chậu rửa TOTO</h3>
+										<strong class="mt-1 mb-1 price d-block">600.000 - 700.000đ</strong>
+										<label class="alo-discount">-20%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Bồn cầu TOTO">
+										<img src="images/image-35.png" alt="Bồn cầu TOTO">
+										<h3 class="title-product">Bồn cầu TOTO</h3>
+										<strong class="mt-1 mb-1 price d-block">2.600.000 - 3.700.000đ</strong>
+										<label class="alo-discount">-20%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Vòi sen TOTO">
+										<img src="images/image-38.png" alt="Vòi sen TOTO">
+										<h3 class="title-product">Vòi sen TOTO</h3>
+										<strong class="mt-1 mb-1 price d-block">2.600.000 - 3.700.000đ</strong>
+										<label class="alo-discount">-30%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!----------------------------- Vật Liệu Xây Dựng -------------------------->
+					
+					<div class="alo-stuff mt-4 mb-4">
+						<div class="row title">
+							<h2 class="pl-3 pr-3">Vật liệu xây dựng</h2>
+							<a href="#" class="pl-3 pr-3 all-product" title="Xem tất cả">Xem tất cả</a>
+							<ul class="pl-3 pr-3 breadcrumbs-product">
+								<li><a href="#" title="Xi măng và bê tông">Xi măng và bê tông</a></li>
+								<li><a href="#" title="Kính xây dựng">Kính xây dựng</a></li>
+								<li><a href="#" title="Gạch, đá ốp lát">Gạch, đá ốp lát</a></li>
+								<li><a href="#" title="TCát xây dựng">Cát xây dựng</a></li>
+								<li><a href="#" title="Vật liệu xây">Vật liệu xây</a></li>
+								<li><a href="#" title="Khác">Khác</a></li>
+							</ul>
+						</div>
+
+						<div class="d-flex flex-wrap wrapper-stuff">
+							<a href="#" title="Vật Liệu Xây Dựng" class="col-12 col-md-12 col-lg-3 stuff-featured item-featured">
+								<strong class="d-block">Tậu Vật Liệu Xịn</strong>
+								<span class="d-block mt-1">Xây Nhà Như Ý</span>
+								<img width="100px" src="images/30.png" alt="Vật Liệu Xây Dựng">
+								<img width="100px" src="images/group-527.png" alt="Vật Liệu Xây Dựng">
+							</a>
+							<div class="col-12 col-md-12 col-lg-9 box-items">
+								<div class="row">
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Xi măng Insee">
+										<img src="images/group-2379.png" alt="Xi măng Insee">
+										<h3 class="title-product">Xi măng Insee</h3>
+										<strong class="mt-1 mb-1 price d-block">600.000 - 700.000đ</strong>
+										<label class="alo-discount">-20%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Xi măng Insee">
+										<img src="images/image-51.png" alt="Xi măng Insee">
+										<h3 class="title-product">Xi măng Insee</h3>
+										<strong class="mt-1 mb-1 price d-block">600.000 - 700.000đ</strong>
+										<label class="alo-discount">-20%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+									<a href="#" class="col-12 col-md-4 col-lg-4 product-prom product" title="Gạch ống">
+										<img src="images/image-40.png" alt="Gạch ống">
+										<h3 class="title-product">Gạch ống</h3>
+										<strong class="mt-1 mb-1 price d-block">600.000 - 700.000đ</strong>
+										<label class="alo-discount">-30%</label>
+										<div class="bottom-product row mt-2 mb-2">
+											<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star gold"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+											</div>
+											<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!----------------------------- AloBuild Mall -------------------------->
+					<div class="alo-stuff mt-3 mb-3">
+						<div class="title">
+							<h2>Ngành Hàng Quan Tâm</h2>
+							<div id="countdown"></div>
+							<a href="#" class="all-product" title="Xem tất cả">Xem tất cả</a>
+						</div>
+
+						<div id="carouselmall" class="carousel slide" data-interval="3500" data-ride="carousel">
+						  	<div class="carousel-inner">
+							    <div class="row wrapper-mall carousel-item active">
+							        <a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Ghế">
+										<img src="images/group-524.png" alt="Ghế">
+										<h4 class="info-mall">Ghế</h4>
+									</a>
+
+									<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Xi măng">
+										<img src="images/image-51.png" alt="Xi măng">
+										<h4 class="info-mall">Xi măng</h4>
+									</a>
+
+									<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Cửa các loại">
+										<img src="images/group-1079.png" alt="Cửa các loại">
+										<h4 class="info-mall">Cửa các loại</h4>
+									</a>
+
+									<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Bồn Cầu">
+										<img src="images/image-35.png" alt="Bồn Cầu">
+										<h4 class="info-mall">Bồn Cầu</h4>
+									</a>
+								</div>
+
+								<div class="row wrapper-mall carousel-item">
+							        <a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Ghế">
+										<img src="images/group-524.png" alt="Ghế">
+										<h4 class="info-mall">Ghế</h4>
+									</a>
+
+									<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Xi măng">
+										<img src="images/image-51.png" alt="Xi măng">
+										<h4 class="info-mall">Xi măng</h4>
+									</a>
+
+									<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Cửa các loại">
+										<img src="images/group-1079.png" alt="Cửa các loại">
+										<h4 class="info-mall">Cửa các loại</h4>
+									</a>
+
+									<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 text-center product-mall product" title="Bồn cầu">
+										<img src="images/image-35.png" alt="Bồn cầu">
+										<h4 class="info-mall">Bồn cầu</h4>
+									</a>
+								
+								</div>
+							</div>
+							<a class="btn-carousel btn-property carousel-control-prev" href="#carouselmall" role="button" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+							<a class="btn-carousel btn-property carousel-control-next" href="#carouselmall" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+						</div>				
+					</div>
+
+
+
+					<!----------------------------- Gợi Ý Cho Bạn -------------------------->
+					<div class="alo-just-for-you mt-4 mb-4">
+						<div class="title">
+							<h2>Gợi Ý Cho Bạn</h2>
+							<div id="countdown"></div>
+							<a href="#" class="all-product" title="Xem tất cả">Xem tất cả</a>
+						</div>
+
+						<div class="row wrapper-just-for-you">
+							<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 product-for-you product" title="Tay nắm cửa">
+								<img src="images/tay-nam-cua.png" alt="Tay nắm cửa">
+								<h3 class="title-product">Tay nắm cửa</h3>
+								<strong class="mt-2 mb-2 d-block">600.000 - 700.000₫</strong>
+								<label class="alo-discount">-30%</label>
+								<div class="bottom-product row mt-2 mb-2">
+									<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+								</div>
+							</a>
+
+							<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 product-for-you product" title="Sofa vàng Homie">
+								<img src="images/asset-2.png" alt="Sofa vàng Homie">
+								<h3 class="title-product">Sofa vàng Homie</h3>
+								<strong class="mt-1 mb-1 price d-block">600.000 - 700.000đ</strong>
+								<div class="bottom-product row mt-2 mb-2">
+									<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+								</div>
+							</a>
+
+							<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 product-for-you product" title="Chậu rửa cao cấp TOTO">
+								<img src="images/image-34.png" alt="Chậu rửa cao cấp TOTO">
+								<h3 class="title-product">Chậu rửa cao cấp TOTO</h3>
+								<strong class="mt-1 mb-1 price d-block">2.600.000 - 3.700.000đ</strong>
+								<label class="alo-discount">-30%</label>
+								<div class="bottom-product row mt-2 mb-2">
+									<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+								</div>
+							</a>
+
+							<a href="#" class="col-12 col-md-6 col-lg-6 col-xl-3 product-for-you product" title="Xi măng Insee">
+								<img src="images/image-51.png" alt="Xi măng Insee">
+								<h3 class="title-product">Xi măng Insee</h3>
+								<strong class="mt-1 mb-1 price d-block">600.000 - 700.000đ</strong>
+								<div class="bottom-product row mt-2 mb-2">
+									<div class="col-12 col-md-12 col-lg-12 col-xl-5 stars">
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star gold"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+									</div>
+									<div class="col-12 col-md-12 col-lg-12 col-xl-7 product-provide">10 nhà cung cấp</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="col-lg-3">
+					<div class="mt-4 mb-4 quick-fiiter">
+						<ul class="nav nav-tabs">
+						  <li class="nav-item">
+						    <a class="nav-link active" data-toggle="tab" href="#du-an-noi-bat">Dự án nổi bật</a>
+						  </li>
+						  <li class="nav-item">
+						    <a class="nav-link" data-toggle="tab" href="#du-an-moi">Dự án mới</a>
+						  </li>
+						</ul>
+						<!-- Tab panes -->
+						<div class="tab-content info-du-an p-2">
+							<div class="tab-pane active" id="du-an-noi-bat">
+								<a class="item-project" href="#" title="Dự án Masteri Thảo Điền"><img src="images/project-1.jpg" alt="Dự án Masteri Thảo Điền">
+									<h5 class="title-project m-0">Dự án Masteri Thảo Điền<label class="float-right location"><i class="fas fa-map-marker-alt mr-1"></i>Quận 2</label></h5>
+								</a>
+
+								<a class="item-project" href="#" title="Dự án Masteri Thảo Điền"><img src="images/project-2.jpg" alt="Dự án Masteri Thảo Điền">
+									<h5 class="title-project m-0">Dự án Masteri Thảo Điền<label class="float-right location"><i class="fas fa-map-marker-alt mr-1"></i>Quận 2</label></h5>
+								</a>
+
+								<a class="item-project" href="#" title="Dự án Masteri Thảo Điền"><img src="images/project-3.jpg" alt="Dự án Masteri Thảo Điền">
+									<h5 class="title-project m-0">Dự án Masteri Thảo Điền<label class="float-right location"><i class="fas fa-map-marker-alt mr-1"></i>Quận 2</label></h5>
+								</a>
+
+							</div>
+						  <div class="tab-pane" id="du-an-moi">
+						  	<a class="item-project" href="#" title="Dự án Masteri Thảo Điền"><img src="images/project-4.jpg" alt="Dự án Masteri Thảo Điền">
+								<h5 class="title-project m-0">Dự án Masteri Thảo Điền<label class="float-right location"><i class="fas fa-map-marker-alt mr-1"></i>Quận 2</label></h5>
+							</a>
+
+							<a class="item-project" href="#" title="Dự án Masteri Thảo Điền"><img src="images/project-5.jpg" alt="Dự án Masteri Thảo Điền">
+								<h5 class="title-project m-0">Dự án Masteri Thảo Điền<label class="float-right location"><i class="fas fa-map-marker-alt mr-1"></i>Quận 2</label></h5>
+							</a>
+
+							<a class="item-project" href="#" title="Dự án Masteri Thảo Điền"><img src="images/project-6.jpg" alt="Dự án Masteri Thảo Điền">
+								<h5 class="title-project m-0">Dự án Masteri Thảo Điền<label class="float-right location"><i class="fas fa-map-marker-alt mr-1"></i>Quận 2</label></h5>
+							</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-------------------------Tư vấn thiết kế ---------------------->
+			<div class="alo-testimonials mt-5 mb-5">
+				<div class="testimonials-tite text-center mb-4">
+					<h3>Tư vấn thiết kế</h3>
+					<p>Các chuyên gia lĩnh vực thiết kế</p>
+				</div>
+			
+				<div id="carouseluser" class="carousel slide" data-interval="3000" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="row wrapper-testimonials carousel-item active">
+				        <div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+							<img src="images/image-4.jpg" alt="Tư vấn thiết kế">
+							<div class="img-testimonials"><img src="images/image-1.jpg" alt="Tư vấn thiết kế"></div>
+							<div class="info-testimonials">
+							<h3><strong>Võ Trọng Nghĩa</strong></h3>
+							<p>Kiến Trúc Sư</p>
+							<p class="address">Hồ Chí Minh</p>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+							<img src="images/image-5.jpg" alt="Tư vấn thiết kế">
+							<div class="img-testimonials"><img src="images/image-2.jpg" alt="Tư vấn thiết kế"></div>
+							<div class="info-testimonials">
+							<h3><strong>Võ Trọng Nghĩa</strong></h3>
+							<p>Kiến Trúc Sư</p>
+							<p class="address">Hồ Chí Minh</p>
+							</div>
+						</div>
+
+						<div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+							<img src="images/image-6.jpg" alt="Tư vấn thiết kế">
+							<div class="img-testimonials"><img src="images/image-3.jpg" alt="Tư vấn thiết kế"></div>
+							<div class="info-testimonials">
+							<h3><strong>Võ Trọng Nghĩa</strong></h3>
+							<p>Kiến Trúc Sư</p>
+							<p class="address">Hồ Chí Minh</p>
+							</div>
+						</div>
+				    </div>
+				    <div class="row wrapper-testimonials carousel-item">
+				        <div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+						  <img src="images/image-4.jpg" alt="Tư vấn thiết kế">
+						  <div class="img-testimonials"><img src="images/image-1.jpg" alt="Tư vấn thiết kế"></div>
+						  <div class="info-testimonials">
+						    <h3><strong>Võ Trọng Nghĩa</strong></h3>
+						    <p>Kiến Trúc Sư</p>
+						    <p class="address">Hồ Chí Minh</p>
+						  </div>
+						</div>
+
+						<div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+						  <img src="images/image-5.jpg" alt="Tư vấn thiết kế">
+						  <div class="img-testimonials"><img src="images/image-2.jpg" alt="Tư vấn thiết kế"></div>
+						  <div class="info-testimonials">
+						    <h3><strong>Võ Trọng Nghĩa</strong></h3>
+						    <p>Kiến Trúc Sư</p>
+						    <p class="address">Hồ Chí Minh</p>
+						  </div>
+						</div>
+
+						<div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+						  <img src="images/image-6.jpg" alt="Tư vấn thiết kế">
+						  <div class="img-testimonials"><img src="images/image-3.jpg" alt="Tư vấn thiết kế"></div>
+						  <div class="info-testimonials">
+						    <h3><strong>Võ Trọng Nghĩa</strong></h3>
+						    <p>Kiến Trúc Sư</p>
+						    <p class="address">Hồ Chí Minh</p>
+						  </div>
+						</div>
+				    </div>
+				    <div class="row wrapper-testimonials carousel-item">
+				      <div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+						  <img src="images/image-4.jpg" alt="Tư vấn thiết kế">
+						  <div class="img-testimonials"><img src="images/image-1.jpg" alt="Tư vấn thiết kế"></div>
+						  <div class="info-testimonials">
+						    <h3><strong>Võ Trọng Nghĩa</strong></h3>
+						    <p>Kiến Trúc Sư</p>
+						    <p class="address">Hồ Chí Minh</p>
+						  </div>
+						</div>
+
+						<div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+						  <img src="images/image-5.jpg" alt="Tư vấn thiết kế">
+						  <div class="img-testimonials"><img src="images/image-2.jpg" alt="Tư vấn thiết kế"></div>
+						  <div class="info-testimonials">
+						    <h3><strong>Võ Trọng Nghĩa</strong></h3>
+						    <p>Kiến Trúc Sư</p>
+						    <p class="address">Hồ Chí Minh</p>
+						  </div>
+						</div>
+
+						<div class="col-12 col-md-4 col-lg-4 mb-3 product-testimonials text-center">
+						  <img src="images/image-6.jpg" alt="Tư vấn thiết kế">
+						  <div class="img-testimonials"><img src="images/image-3.jpg" alt="Tư vấn thiết kế"></div>
+						  <div class="info-testimonials">
+						    <h3><strong>Võ Trọng Nghĩa</strong></h3>
+						    <p>Kiến Trúc Sư</p>
+						    <p class="address">Hồ Chí Minh</p>
+						  </div>
+						</div>
+					 </div>
+				  </div>
+				  <a class="btn-carousel carousel-control-prev" href="#carouseluser" role="button" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				  <a class="btn-carousel carousel-control-next" href="#carouseluser" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+
+			<!----------------------------- Nhà Thầu Thi Công ------------------->
+
+			<div class="alo-property mt-5 mb-5">
+				<div class="property-tite text-center">
+					<h3 class="mb-4"> Nhà thầu thi công</h3>
+				</div>
+
+				<div id="carouselproperty" class="carousel slide" data-interval="2500" data-ride="carousel">
+				  	<div class="carousel-inner">
+					    <div class="row wrapper-property carousel-item active">
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Coteccons"><img src="images/logo-1.png" alt="Coteccons"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Hoa Binh"><img src="images/logo-2.png" alt="Hoa Binh"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Unicons"><img src="images/logo-3.png" alt="Unicons"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Vinaconex"><img src="images/logo-4.png" alt="Vinaconex"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Fecon"><img src="images/logo-5.png" alt="Fecon"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Delta"><img src="images/logo-6.png" alt="Delta"></a>
+						</div>
+						<div class="row wrapper-property carousel-item">
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Phuc Hung"><img src="images/logo-7.png" alt="Phuc Hung"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Ricons"><img src="images/logo-8.png" alt="Ricons"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Licogi"><img src="images/logo-9.png" alt="Licogi"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Thang Long"><img src="images/logo-10.png" alt="Thang Long"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Hoang Mai"><img src="images/logo-11.png" alt="Hoang Mai"></a>
+					        <a class="col-12 col-md-4 col-lg-2 product-for-you product" href="#" title="Viện KHCN Xây Dựng"><img src="images/logo-12.png" alt="Viện KHCN Xây Dựng"></a>
+						</div>
+					</div>
+					 <a class="btn-carousel btn-property carousel-control-prev" href="#carouselproperty" role="button" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					 <a class="btn-carousel btn-property carousel-control-next" href="#carouselproperty" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+
+
+
+			<!--------------------------- Tin Tức ------------------->
+
+			<div class="alo-news mt-5 mb-5">
+				<div class="testimonials-tite text-center mb-4">
+					<h3>Tin tức</h3>
+					<p>Luôn cập nhật tin tức mới nhất về thiết kế nội thất và xây dựng</p>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-6 col-xl-3 item-news">
+						<a href="#" title="8 cách cực khéo mang sắc pastel ngọt lịm vào không gian sống"><img src="images/image-7.jpg" alt="8 cách cực khéo mang sắc pastel ngọt lịm vào không gian sống"></a>
+						<div class="p-3 content-news">
+							<a href="#" title="8 cách cực khéo mang sắc pastel ngọt lịm vào không gian sống"><strong>8 cách cực khéo mang sắc pastel ngọt lịm vào không gian sống</strong></a>
+							<span class="date mt-2 mb-2 d-block"><i class="far fa-calendar-alt mr-1"></i></i>13/12/2018</span>
+							<p>Từ lâu, những sắc màu nhạt dịu dàng thuộc tông màu pastel luôn là lựa chọn yêu thích</p>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-6 col-xl-3 item-news">
+						<a href="#" title="13 kiểu bình phong trang trí làm mới không gian nhà bạn"><img src="images/image-8.jpg" alt="13 kiểu bình phong trang trí làm mới không gian nhà bạn"></a>
+						<div class="p-3 content-news">
+							<a href="#" title="13 kiểu bình phong trang trí làm mới không gian nhà bạn"><strong>13 kiểu bình phong trang trí làm mới không gian nhà bạn</strong></a>
+							<span class="date mt-2 mb-2 d-block"><i class="far fa-calendar-alt mr-1"></i></i>13/12/2018</span>
+							<p> Trong không gian chật hẹp bình phong sẽ là một gợi ý trang trí tuyệt vời cho các căn hộ...</p>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-6 col-xl-3 item-news">
+						<a href="#" title="17 kiểu cầu thang kết hợp từ gỗ và kính khiến bạn không thể khời mắt"><img src="images/image-9.jpg" alt="17 kiểu cầu thang kết hợp từ gỗ và kính khiến bạn không thể khời mắt"></a>
+						<div class="p-3 content-news">
+							<a href="#" title="17 kiểu cầu thang kết hợp từ gỗ và kính khiến bạn không thể khời mắt"><strong>17 kiểu cầu thang kết hợp từ gỗ và kính khiến bạn không thể khời mắt</strong></a>
+							<span class="date mt-2 mb-2 d-block"><i class="far fa-calendar-alt mr-1"></i></i>13/12/2018</span>
+							<p> Cầu thang luôn là nơi giúp tạo điểm nhấn cho không gian căn nhà. Không chỉ được dùng...</p>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-6 col-lg-6 col-xl-3 item-news">
+						<a href="#" title=" "><img src="images/image-10.jpg" alt="16 kiểu thiết kế bồn tắm khơi dậy cảm hứng ngay từ cái nhìn đầu tiên"></a>
+						<div class="p-3 content-news">
+							<a href="#" title="16 kiểu thiết kế bồn tắm khơi dậy cảm hứng ngay từ cái nhìn đầu tiên"><strong>16 kiểu thiết kế bồn tắm khơi dậy cảm hứng ngay từ cái nhìn đầu tiên</strong></a>
+							<span class="date mt-2 mb-2 d-block"><i class="far fa-calendar-alt mr-1"></i></i>13/12/2018</span>
+							<p>Sau một ngày làm việc vất vả không còn gì tuyệt vời hơn khi được ngỉ xả hơi trong...</p>
+						</div>
+					</div>
+					<a href="#" title="Xem tất cả" class="more-news">Xem tất cả</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-home">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-6 col-lg-5 left-bottom text-right">
+					<h4><strong>Nhận Tin Tức</strong><span>và cập nhật tin tức mới nhất từ <strong>AloBuild</strong></span></h4>
+				</div>
+				<div class="col-12 col-md-6 col-lg-7 right-bottom">
+					<form class="form-submit">
+						<input type="email" placeholder="Nhập email của bạn">
+						<input class="fa-input" type="submit" value="&#xf30b;">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="top-footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-4 col-lg-4 mb-2">
+						<h2><strong>Liên Hệ</strong></h2>
+						<ul>
+							<li> Thứ Hai - Chủ Nhật</li>
+							<li><a href="#" title="Trung tâm trợ giúp">Trung tâm trợ giúp</a></li>
+							<li><a href="#" title="Cách thức mua hàng">Cách thức mua hàng</a></li>
+							<li><a href="#" title="Phương thức giao hàng">Phương thức giao hàng</a></li>
+							<li><a href="#" title="Phương thức trả hàng">Phương thức trả hàng</a></li>
+							<li><a href="#" title="Cách dùng voucher">Cách dùng voucher</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4 col-lg-4 mb-2">
+						<h2><strong>AloBuild</strong></h2>
+						<ul>
+							<li><a href="#" title="Giới Thiệu AloBuild">Giới Thiệu AloBuild</a></li>
+							<li><a href="#" title="Bán hàng trên AloBuild">Bán hàng trên AloBuild</a></li>
+							<li><a href="#" title="Nghề nghiệp trên AloBuild">Nghề nghiệp trên AloBuild</a></li>
+							<li><a href="#" title="Điều khoản & điều kiện">Điều khoản & điều kiện</a></li>
+							<li><a href="#" title="Báo chí nói về AloBuild">Báo chí nói về AloBuild</a></li>
+							<li><a href="#" title="Chính sách hoạt động">Chính sách hoạt động</a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4 col-lg-4 mb-2">
+						<a class="icon-app mr-3" href="#" title="App store"><img src="images/app-store.png" alt="App store"></a>
+						<a class="icon-app" href="#" title="Google Play"><img src="images/google-play.png" alt="Google Play"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-4 col-lg-5 list-payment">
+						<h2><strong>Phương Thức Thanh Toán</strong></h2>
+						<ul>
+							<li><a href="#" title="JCB"><img src="images/pay-pay.png" alt="JCB"></a></li>
+							<li><a href="#" title="Mastercard"><img src="images/mastercard.png" alt="Mastercard"></a></li>
+							<li><a href="#" title="Visa"><img src="images/visa.png" alt="Pay Pay"></a></li>
+							<li><a href="#" title="Cash on Delivery"><img src="images/g-pay.png" alt="Cash on Delivery"></a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4 col-lg-4 list-payment delivery">
+						<h2><strong>Giao Hàng</strong></h2>
+						<ul>
+							<li><a href="#" title="Vận Chuyển"><img src="images/van-chuyen.png" alt="Vận Chuyển"></a></li>
+							<li><a href="#" title="Vận Chuyển"><img src="images/van-chuyen-2.png" alt="Vận Chuyển"></a></li>
+						</ul>
+					</div>
+					<div class="col-12 col-md-4 col-lg-3 list-payment">
+						<h2><strong>Chứng Nhận</strong></h2>
+						<a href="#" title="Chứng Nhận"><img src="images/chung-nhan.png" alt=" Chứng Nhận"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/js/jquery-3.3.1.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/bootstrap/js/jquery.slim.min.js"></script>
+		<script src="assets/js/countdown-hours.js"></script>
+  		<script type="text/javascript">
+  			$(document).ready(function() {
+				$('.btn-open').click(function(event) {
+					$('.sidenav').addClass('menu-show');
+				});
+				$('.btn-close').click(function(event) {
+					$('.sidenav').removeClass('menu-show');
+				});
+			});
+  		</script>
+		
+		<!--Select search-->
+		<script>
+			$(document).ready(function(e){
+				$('.search-panel .dropdown-menu').find('a').click(function(e) {
+					e.preventDefault();
+					var param = $(this).attr("href").replace("#","");
+					var concept = $(this).text();
+					$('.search-panel span#search_concept').text(concept);
+					$('.input-group #search_param').val(param);
+				});
+			});
+		</script>
+
+	</footer>
 </body>
 </html>

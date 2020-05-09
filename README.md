@@ -1,2 +1,0 @@
-# alobuild.ico
-alobuild.com

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AloBuild icon</title>
+<title>AloBuild</title>
 <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="assets/responsive.css">
@@ -26,7 +26,7 @@
 							<li class="col-2 col-lg-3 text-right">
 								<a class="alo-cart" href="#" title="Giỏ Hàng">
 									<span class="text">Giỏ Hàng</span>
-									<span class="counter-number">99+</span>
+									<span class="counter-number">999</span>
 								</a>
 							</li>
 						</ul>
@@ -85,15 +85,16 @@
 												<span id="search_concept">Tất cả</span> <span class="caret"></span>
 											</button>
 											<ul class="dropdown-menu" role="menu">
-											  <li><a class="dropdown-item"   href="#contains">Tất cả</a></li>
-											  <li><a class="dropdown-item"   href="#contains">Vật liệu xây dựng</a></li>
+											  <li><a class="dropdown-item"   href="#all">Tất cả</a></li>
+											  <li><a class="dropdown-item"   href="#Vật liệu xây dựng">Vật liệu xây dựng</a></li>
 											  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
-											  <li><a class="dropdown-item"  href="#greather_than">Thiết kế</a></li>
-											  <li><a class="dropdown-item"  href="#less_than">Thi công</a></li>
-											  <li><a class="dropdown-item"  href="#all">Thiết bị xây Dựng</a></li>
-											  <li><a class="dropdown-item"  href="#all">Thiết bị MEP</a></li>
+											  <li><a class="dropdown-item"  href="#Trang trí nội Thất">Thiết kế</a></li>
+											  <li><a class="dropdown-item"  href="#Thi công">Thi công</a></li>
+											  <li><a class="dropdown-item"  href="#Thiết bị xây Dựng">Thiết bị xây Dựng</a></li>
+											  <li><a class="dropdown-item"  href="#Thiết bị MEP">Thiết bị MEP</a></li>
 											</ul>
 										</div>
+										<input type="hidden" name="search_param" value="all" id="search_param">
 										
 										
 								   	</div>
@@ -109,7 +110,7 @@
 							<li class="col-md-3 text-center">
 								<a class="alo-cart" href="#" title="Giỏ hàng">
 									<span class="text">Giỏ hàng</span>
-									<span class="counter-number">99+</span>
+									<span class="counter-number">999</span>
 								</a>
 							</li>
 						</ul>
@@ -425,7 +426,7 @@
 					<li class="col-2">
 						<a class="alo-cart" href="#" title="Giỏ hàng">
 							<span class="text">Giỏ hàng</span>
-							<span class="counter-number">99+</span>
+							<span class="counter-number">999</span>
 						</a>
 					</li>
 				</ul>
@@ -462,6 +463,7 @@
 						  <li><a class="dropdown-item"  href="#all">Thiết bị xây Dựng</a></li>
 						  <li><a class="dropdown-item"  href="#all">Thiết bị MEP</a></li>
 						</ul>
+						<input type="hidden" name="search_param" value="all" id="search_param">
 					</div>
 			   	</div>
 			    <input class="pt-2 pb-2 col-9 col-md-8 col-lg-8 input-field second-wrap" id="search-mobile" type="text" name="search" placeholder="Nhập tên hay mã sản phẩm bạn quan tâm">
@@ -506,70 +508,138 @@
 							<div class="tab-content p-2">
 								<div class="tab-pane active" id="search-du-an">
 								 	<input class="name-product" type="text" name="name-product" placeholder="Tên dự án">
-								 	<div class="dropdown dropdown-search">
-								        <button class="btn dropdown-toggle" type="button" id="tp" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">Tỉnh / Thành phố</button>
-								        <div class="dropdown-menu" aria-labelledby="tp">
-								          <a class="dropdown-item" href="#">TPHCM</a>
-								          <a class="dropdown-item" href="#">Hà Nội</a>
-								          <a class="dropdown-item" href="#">Đà Nẵng</a>
-								          <a class="dropdown-item" href="#">Cần Thơ</a>
-								          <a class="dropdown-item" href="#">Bình Dương</a>
-								          <a class="dropdown-item" href="#">An Giang</a>
-								          <a class="dropdown-item" href="#">Bà Rịa - Vũng Tàu</a>
-								          <a class="dropdown-item" href="#">Bắc Kạn</a>
-								          <a class="dropdown-item" href="#">Bến Tre</a>
-								          <a class="dropdown-item" href="#">Bình Phước</a>
-								        </div>
+								 	<div class="dropdown dropdown-search custom-selects">
+								       <select class="font-controls" name="province">
+											<option value="0">Tỉnh/ Thành Phố</option>
+											<option value="Hồ Chí Minh"> Hồ Chí Minh </option>
+											<option value="Hà Nội"> Hà Nội </option>
+											<option value="Tây Ninh"> Tây Ninh </option>
+											<option value="Đồng Nai"> Đồng Nai </option>
+											<option value="Bình Phước"> Bình Phước </option>
+											<option value="Đà Lạt"> Đà Lạt </option>
+											<option value="Lâm Đồng"> Lâm Đồng </option>
+											<option value="Đắk Nông"> Đắk Nông </option>
+											<option value="Đắk Lắk"> Đắk Lắk </option>
+											<option value="Gia Lai"> Gia Lai </option>
+											<option value="Kon Tum"> Kon Tum </option>
+											<option value="Bình Thuận"> Bình Thuận </option>
+											<option value="Ninh Thuận"> Ninh Thuận </option>
+											<option value="Khánh Hòa"> Khánh Hòa </option>
+											<option value="Phú Yên"> Phú Yên </option>
+											<option value="Bình Định"> Bình Định </option>
+											<option value="Quảng Ngãi"> Quảng Ngãi </option>
+											<option value="Bình Dương"> Bình Dương </option>
+											<option value="Quảng Nam"> Quảng Nam </option>
+											<option value="Bà Rịa - Vũng Tàu"> Bà Rịa - Vũng Tàu </option>
+											<option value="Long An"> Long An </option>
+											<option value="Tiền Giang"> Tiền Giang </option>
+											<option value="Bến Tre"> Bến Tre </option>
+											<option value="Trà Vinh"> Trà Vinh </option>
+											<option value="Vĩnh Long"> Vĩnh Long </option>
+											<option value="Đồng Tháp"> Đồng Tháp </option>
+											<option value="An Giang"> An Giang </option>
+											<option value="Kiên Giang"> Kiên Giang </option>
+											<option value="Cần Thơ"> Cần Thơ </option>
+											<option value="Hậu Giang"> Hậu Giang </option>
+											<option value="Sóc Trăng"> Sóc Trăng </option>
+											<option value="Bạc Liêu"> Bạc Liêu </option>
+											<option value="Cà Mau"> Cà Mau </option>
+											<option value="Vĩnh Phúc"> Vĩnh Phúc </option>
+											<option value="Hà Giang"> Hà Giang </option>
+											<option value="Cao Bằng"> Cao Bằng </option>
+											<option value="Bắc Kạn"> Bắc Kạn </option>
+											<option value="Tuyên Quang"> Tuyên Quang </option>
+											<option value="Lào Cai"> Lào Cai </option>
+											<option value="Điện Biên"> Điện Biên </option>
+											<option value="Lai Châu"> Lai Châu </option>
+											<option value="Sơn La"> Sơn La </option>
+											<option value="Yên Bái"> Yên Bái </option>
+											<option value="Hòa Bình"> Hòa Bình </option>
+											<option value="Thái Nguyên"> Thái Nguyên </option>
+											<option value="Lạng Sơn"> Lạng Sơn </option>
+											<option value="Quảng Ninh"> Quảng Ninh </option>
+											<option value="Bắc Giang"> Bắc Giang </option>
+											<option value="Phú Thọ"> Phú Thọ </option>
+											<option value="Đà Nẵng"> Đà Nẵng </option>
+											<option value="Bắc Ninh"> Bắc Ninh </option>
+											<option value="Hải Dương"> Hải Dương </option>
+											<option value="Hải Phòng"> Hải Phòng </option>
+											<option value="Hưng Yên"> Hưng Yên </option>
+											<option value="Thái Bình"> Thái Bình </option>
+											<option value="Hà Nam"> Hà Nam </option>
+											<option value="Nam Định"> Nam Định </option>
+											<option value="Ninh Bình"> Ninh Bình </option>
+											<option value="Thanh Hóa"> Thanh Hóa </option>
+											<option value="Nghệ An"> Nghệ An </option>
+											<option value="Hà Tĩnh"> Hà Tĩnh </option>
+											<option value="Quảng Bình"> Quảng Bình </option>
+											<option value="Quảng Trị"> Quảng Trị </option>
+											<option value="Thừa Thiên Huế"> Thừa Thiên Huế </option>
+										</select>
+								    </div>
+									
+								 										
+									<div class="dropdown dropdown-search custom-selects">
+								       <select class="font-controls" name="quan">
+											<option value="0">Quận / Huyện</option>
+											<option value="Quận 1"> Quận 1 </option>
+											<option value="Quận 2"> Quận 2 </option>
+											<option value="Quận 3"> Quận 3 </option>
+											<option value="Quận 4"> Quận 4 </option>
+											<option value="Quận 5"> Quận 5 </option>
+											<option value="Quận 6"> Quận 6 </option>
+											<option value="Quận 7"> Quận 7 </option>
+											<option value="Quận 8"> Quận 8 </option>
+											<option value="Quận 9"> Quận 9 </option>
+											<option value="Quận 10"> Quận 10 </option>
+											<option value="Quận 11"> Quận 11 </option>
+											<option value="Quận 12"> Quận 12 </option>
+										</select>
 								    </div>
 
-								    <div class="dropdown dropdown-search">
-								        <button class="btn dropdown-toggle" type="button" id="qh" data-toggle="dropdown" data-flip="false" aria-haspopup="true"  aria-expanded="false">Quận / Huyện</button>
-								        <div class="dropdown-menu" aria-labelledby="qh">
-								          <a class="dropdown-item" href="#">Quận 1</a>
-								          <a class="dropdown-item" href="#">Quận 2</a>
-								          <a class="dropdown-item" href="#">Quận 3</a>
-								          <a class="dropdown-item" href="#">Quận 4</a>
-								          <a class="dropdown-item" href="#">Quận 5</a>
-								          <a class="dropdown-item" href="#">Quận 6</a>
-								          <a class="dropdown-item" href="#">Quận 6</a>
-								          <a class="dropdown-item" href="#">Quận 7</a>
-								          <a class="dropdown-item" href="#">Quận 8</a>
-								          <a class="dropdown-item" href="#">Quận 9</a>
-								        </div>
+								    <div class="dropdown dropdown-search custom-selects">
+								       <select class="font-controls" name="phuong">
+											<option value="0">Phường / Xã</option>
+											<option value="Phường 1"> Phường 1 </option>
+											<option value="Phường 2"> Phường 2 </option>
+											<option value="Phường 3"> Phường 3 </option>
+											<option value="Phường 4"> Phường 4 </option>
+											<option value="Phường 5"> Phường 5 </option>
+											<option value="Phường 6"> Phường 6 </option>
+											<option value="Phường 7"> Phường 7 </option>
+											<option value="Phường 8"> Phường 8 </option>
+											<option value="Phường 9"> Phường 9 </option>
+											<option value="Phường 10">Phường 10 </option>
+											<option value="Phường 11">Phường 11 </option>
+											<option value="Phường 12">Phường 12 </option>
+										</select>
 								    </div>
 
-								    <div class="dropdown dropdown-search">
-								        <button class="btn dropdown-toggle" type="button" id="phuong-xa" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">Phường / Xã</button>
-								        <div class="dropdown-menu" aria-labelledby="phuong-xa">
-								          <a class="dropdown-item" href="#">Phường 1</a>
-								          <a class="dropdown-item" href="#">Phường 2</a>
-								          <a class="dropdown-item" href="#">Phường 3</a>
-								          <a class="dropdown-item" href="#">Phường 4</a>
-								          <a class="dropdown-item" href="#">Phường 5</a>
-								          <a class="dropdown-item" href="#">Phường 6</a>
-								          <a class="dropdown-item" href="#">Phường 7</a>
-								          <a class="dropdown-item" href="#">Phường 8</a>
-								          <a class="dropdown-item" href="#">Phường 9</a>
-								          <a class="dropdown-item" href="#">Phường 10</a>
-								        </div>
+								    <div class="dropdown dropdown-search custom-selects">
+								       <select class="font-controls" name="dt">
+											<option value="0">Diện tích</option>
+											<option value="Diện tích 1"> Diện tích 1 </option>
+											<option value="Diện tích 2"> Diện tích 2 </option>
+											<option value="Diện tích 3"> Diện tích 3 </option>
+											<option value="Diện tích 1"> Diện tích 1 </option>
+											<option value="Diện tích 2"> Diện tích 2 </option>
+											<option value="Diện tích 3"> Diện tích 3 </option>
+											<option value="Diện tích 3"> Diện tích 3 </option>
+										</select>
 								    </div>
 
-								    <div class="dropdown dropdown-search">
-								        <button class="btn dropdown-toggle" type="button" id="region" data-toggle="dropdown" data-flip="false"  aria-haspopup="true" aria-expanded="false">Diện tích</button>
-								        <div class="dropdown-menu" aria-labelledby="region">
-								          <a class="dropdown-item" href="#">Diện tích 1</a>
-								          <a class="dropdown-item" href="#">Diện tích 2</a>
-								          <a class="dropdown-item" href="#">Diện tích 3</a>
-								        </div>
-								    </div>
-
-								    <div class="dropdown dropdown-search">
-								        <button class="btn dropdown-toggle" type="button" id="xep-hang" data-toggle="dropdown" data-flip="false" aria-haspopup="true" aria-expanded="false">Xếp hạng</button>
-								        <div class="dropdown-menu" aria-labelledby="xep-hang">
-								          <a class="dropdown-item" href="#">Hạng 1</a>
-								          <a class="dropdown-item" href="#">Hạng 2</a>
-								          <a class="dropdown-item" href="#">Hạng 3</a>
-								        </div>
+								    <div class="dropdown dropdown-search custom-selects">
+								       <select class="font-controls" name="hang">
+											<option value="0">Xếp hạng</option>
+											<option value="Hạng 1"> Hạng 1 </option>
+											<option value="Hạng 2"> Hạng 2 </option>
+											<option value="Hạng 3"> Hạng 3 </option>
+											<option value="Hạng 1"> Hạng 1 </option>
+											<option value="Hạng 2"> Hạng 2 </option>
+											<option value="Hạng 3"> Hạng 3 </option>
+											<option value="Hạng 2"> Hạng 2 </option>
+											<option value="Hạng 3"> Hạng 3 </option>
+										</select>
 								    </div>
 									<button class="submit-product" type="submit" value="tim kiem">Tìm kiếm</button>
 								</div>
@@ -1429,6 +1499,7 @@
 		<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/bootstrap/js/jquery.slim.min.js"></script>
 		<script src="assets/js/countdown-hours.js"></script>
+		<script src="assets/js/custom-select.js"></script>
   		<script type="text/javascript">
   			$(document).ready(function() {
 				$('.btn-open').click(function(event) {
@@ -1440,18 +1511,7 @@
 			});
   		</script>
 		
-		<!--Select search-->
-		<script>
-			$(document).ready(function(e){
-				$('.search-panel .dropdown-menu').find('a').click(function(e) {
-					e.preventDefault();
-					var param = $(this).attr("href").replace("#","");
-					var concept = $(this).text();
-					$('.search-panel span#search_concept').text(concept);
-					$('.input-group #search_param').val(param);
-				});
-			});
-		</script>
+		
 
 	</footer>
 </body>

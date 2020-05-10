@@ -88,7 +88,7 @@ $('#carouselrightsell').owlCarousel({
 	loop:true,
 	margin:0,
 	autoplay:true,
-	autoplayTimeout:222222000,
+	autoplayTimeout:2000,
 	autoplayHoverPause:false,
 	dots: true,
 	responsiveClass:true,

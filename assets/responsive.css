@@ -44,6 +44,8 @@
 	.menu-header .dropdown > .dropdown-toggle:active {
 	    pointer-events: none;
 	}
+	
+	
 }
 @media (max-width: 990px)
 {
@@ -86,6 +88,14 @@
 	.inner-form
 	{
 		margin: 20px auto;
+	}
+	.search-panel button {
+		background: white;
+		border-radius: 16px 0 0 16px;
+		color: #494949;
+	}
+	.inner-form{
+		background:#0b466e;
 	}
 }
 @media (max-width: 600px)

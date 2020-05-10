@@ -164,6 +164,11 @@ button:focus
 	cursor:pointer;
 	height: 38px;
 }
+.input-seach
+{
+	border-top: 0;
+    border-bottom: 0;
+}
 
 ::-webkit-input-placeholder
 {

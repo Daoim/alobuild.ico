@@ -66,30 +66,26 @@
 						<div class="row align-items-center">
 							<button class="d-none d-md-block col-md-2 col-lg-1 menu-desktop" data-toggle="collapse" data-target="#menu-desktop"><i class="fa fa-bars"></i></button>
 							<div class="col-md-10 col-lg-11 inner-form">
-								<div class="row">
-								   <div class="text-center pt-2 pb-2 col-lg-2 col-md-3 input-field first-wrap">
-										
-																		
-										<div class="input-group-btn search-panel">
-											<button type="button" class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown">
-												<span id="search_concept">Tất cả</span> <span class="caret"></span>
-											</button>
-											<ul class="dropdown-menu" role="menu">
-											  <li><a class="dropdown-item"   href="#all">Tất cả</a></li>
-											  <li><a class="dropdown-item"   href="#Vật liệu xây dựng">Vật liệu xây dựng</a></li>
-											  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
-											  <li><a class="dropdown-item"  href="#Trang trí nội Thất">Thiết kế</a></li>
-											  <li><a class="dropdown-item"  href="#Thi công">Thi công</a></li>
-											  <li><a class="dropdown-item"  href="#Thiết bị xây Dựng">Thiết bị xây Dựng</a></li>
-											  <li><a class="dropdown-item"  href="#Thiết bị MEP">Thiết bị MEP</a></li>
-											</ul>
-										</div>
-										<input type="hidden" name="search_param" value="all" id="search_param">
-										
-										
-								   	</div>
-								    <input class="pt-2 pb-2 col-6 col-lg-8 input-field second-wrap" id="search" type="text" name="search" placeholder="Nhập tên hoặc mã sản phẩm bạn quan tâm">
-								    <button type="submit" class="pt-2 pb-2 col-3 p-0 col-lg-2 input-field third-wrap btn-search"><i class="fa fa-search" aria-hidden="true"></i> Tìm</button>
+								<div class="input-group">
+									<div class="input-group-btn search-panel">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+											<span id="search_concept">Tất cả</span> <span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu">
+										  <li><a class="dropdown-item"   href="#all">Tất cả</a></li>
+										  <li><a class="dropdown-item"   href="#Vật liệu xây dựng">Vật liệu xây dựng</a></li>
+										  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
+										  <li><a class="dropdown-item"  href="#Trang trí nội Thất">Thiết kế</a></li>
+										  <li><a class="dropdown-item"  href="#Thi công">Thi công</a></li>
+										  <li><a class="dropdown-item"  href="#Thiết bị xây Dựng">Thiết bị xây Dựng</a></li>
+										  <li><a class="dropdown-item"  href="#Thiết bị MEP">Thiết bị MEP</a></li>
+										</ul>
+									</div>
+									<input type="hidden" name="search_param" value="all" id="search_param">         
+									<input type="text" class="form-control" name="x" placeholder="Nhập tên hoặc mã sản phẩm bạn quan tâm">
+									<span class="input-group-btn">
+										<button class="btn btn-default btn-search" type="button"><i class="fa fa-search" aria-hidden="true"></i> Tìm</button>
+									</span>
 								</div>
 							</div>
 						</div>
@@ -424,30 +420,35 @@
 		</div>
 
 	</header>
+	
 	<div id="formsearch-mobile" class="collapse form-seach-mobile">
-			<div class="inner-form row">
-			   	<div class="text-center d-none d-md-block col-md-2 pt-2 pb-2 col-lg-2 col-md-2 input-field first-wrap">
-									
-					<div class="input-group-btn search-panel">
-						<button type="button" class="btn btn-default dropdown-toggle btn-select" data-toggle="dropdown">
-							<span id="search_concept">Tất cả</span> <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-						  <li><a class="dropdown-item"   href="#contains">Tất cả</a></li>
-						  <li><a class="dropdown-item"   href="#contains">Vật liệu xây dựng</a></li>
-						  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
-						  <li><a class="dropdown-item"  href="#greather_than">Thiết kế</a></li>
-						  <li><a class="dropdown-item"  href="#less_than">Thi công</a></li>
-						  <li><a class="dropdown-item"  href="#all">Thiết bị xây Dựng</a></li>
-						  <li><a class="dropdown-item"  href="#all">Thiết bị MEP</a></li>
-						</ul>
-						<input type="hidden" name="search_param" value="all" id="search_param">
-					</div>
-			   	</div>
-			    <input class="pt-2 pb-2 col-9 col-md-8 col-lg-8 input-field second-wrap" id="search-mobile" type="text" name="search" placeholder="Nhập tên hay mã sản phẩm bạn quan tâm">
-			    <button type="submit" class="pt-2 pb-2 col-3 col-md-2 p-0 col-lg-2 input-field third-wrap btn-search"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
-			</div>
+		<div class="inner-form">
+			<div class="input-group">
+				<div class="input-group-btn search-panel d-none d-md-block">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<span id="search_concept">Tất cả</span> <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+					  <li><a class="dropdown-item"   href="#all">Tất cả</a></li>
+					  <li><a class="dropdown-item"   href="#Vật liệu xây dựng">Vật liệu xây dựng</a></li>
+					  <li><a class="dropdown-item"  href="#its_equal">Trang trí nội Thất</a></li>
+					  <li><a class="dropdown-item"  href="#Trang trí nội Thất">Thiết kế</a></li>
+					  <li><a class="dropdown-item"  href="#Thi công">Thi công</a></li>
+					  <li><a class="dropdown-item"  href="#Thiết bị xây Dựng">Thiết bị xây Dựng</a></li>
+					  <li><a class="dropdown-item"  href="#Thiết bị MEP">Thiết bị MEP</a></li>
+					</ul>
+				</div>
+				<input type="hidden" name="search_param" value="all" id="search_param">         
+				<input type="text" class="form-control" name="x" placeholder="Nhập tên hoặc mã sản phẩm bạn quan tâm">
+				<span class="input-group-btn">
+					<button class="btn btn-default btn-search" type="button"><i class="fa fa-search" aria-hidden="true"></i> Tìm</button>
+				</span>
+			</div>	
 		</div>
+	</div>
+	
+	
+	
 
 
 	<div class="top-home mt-4">

@@ -111,8 +111,9 @@
 	}
 	.inner-form
 	{
-		padding-left: 10px;
+		/* padding-left: 10px; */
 		overflow: hidden;
+		background: #004777;
 	}
 	.dropdown-language .dropdown-menu.show
 	{

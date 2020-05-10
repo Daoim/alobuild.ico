@@ -1228,14 +1228,14 @@ span.btn-close
 .owl-carousel .owl-nav button.owl-prev
 {
 	position:absolute;
-	top:40%;
+	top:38%;
 	left:10px
 }
 
 .owl-carousel .owl-nav button.owl-next
 {
 	position:absolute;
-	top:40%;
+	top:38%;
 	right:10px
 }
 

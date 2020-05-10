@@ -191,9 +191,9 @@ $('#carouselproperty').owlCarousel({
 // Tư vấn thiết kế
 $('#carouseluser').owlCarousel({
 	loop:true,
-	margin:0,
-	autoplay:true,
-	autoplayTimeout:2222222000,
+	margin:15,
+	autoplay:false,
+	autoplayTimeout:2000,
 	autoplayHoverPause:false,
 	dots: false,
 	responsiveClass:true,

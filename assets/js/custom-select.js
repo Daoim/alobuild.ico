@@ -192,7 +192,7 @@ $('#carouselproperty').owlCarousel({
 $('#carouseluser').owlCarousel({
 	loop:true,
 	margin:15,
-	autoplay:false,
+	autoplay:true,
 	autoplayTimeout:2000,
 	autoplayHoverPause:false,
 	dots: false,

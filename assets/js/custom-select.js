@@ -125,7 +125,7 @@ $('#flash_deals').owlCarousel({
 	responsive:{
 		0:{
 			items:1,
-			nav:true
+			nav:false
 		},
 		600:{
 			items:3,
@@ -150,7 +150,7 @@ $('#carouselmall').owlCarousel({
 	responsive:{
 		0:{
 			items:1,
-			nav:true
+			nav:false
 		},
 		600:{
 			items:3,
@@ -175,7 +175,7 @@ $('#carouselproperty').owlCarousel({
 	responsive:{
 		0:{
 			items:2,
-			nav:true
+			nav:false
 		},
 		600:{
 			items:4,
@@ -200,7 +200,7 @@ $('#carouseluser').owlCarousel({
 	responsive:{
 		0:{
 			items:1,
-			nav:true
+			nav:false
 		},
 		600:{
 			items:2,

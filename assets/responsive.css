@@ -97,6 +97,9 @@
 	.inner-form{
 		background:#0b466e;
 	}
+	.input-seach{
+		border-radius: 16px 0 0 16px !important;
+	}
 }
 @media (max-width: 600px)
 {
@@ -129,6 +132,27 @@
 	{
 	  -webkit-transform: translate3d(-85px, 0px, 0px);
        transform: translate3d(-85px, 0px, 0px);
+	}
+	.owl-buttons {
+	  display: none;
+	}
+	.owl-carousel:hover .owl-buttons {
+	  display: block;
+	}
+
+	.owl-item {
+	  text-align: center;
+	}
+
+	.owl-theme .owl-controls .owl-buttons div {
+	  background: transparent;
+	  color: #869791;
+	  font-size: 40px;
+	  line-height: 300px;
+	  margin: 0;
+	  padding: 0 60px;
+	  position: absolute;
+	  top: 0;
 	}
 }
 @media (max-width: 1024px)
